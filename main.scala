@@ -57,7 +57,11 @@ def eval(e: Expr, env: Env = Map.empty): Either[EvalError, Value] =
         case Div(e1, e2) =>
             expect_int(e1, e2, env) match
                 case Left(error) => Left(error)
-                case Right((a, b)) => Right(IntV(a / b))
+                case Right((a, b)) => 
+                    if b then
+                        Right(IntV(a / b))
+                    else
+                        Left(DivideByZero)
             
         case Less(e1, e2) =>
             expect_int(e1, e2, env) match
@@ -120,9 +124,9 @@ def eval(e: Expr, env: Env = Map.empty): Either[EvalError, Value] =
     var expr = Let("x", Num(4),Plus(Let("x", Plus(Var("x"), Num(1)), Var("x")),Var("x")))
     val expr1 = Let("x", Num(10), Var("x"))
 
-    val test1 = 
-    val test2 = ???
-    val test3 = ???
+    val test1 = If(Less(Plus(Num(3), Num(2)), Div(Num(20), Num(2))), Bool(true), Bool(false)) // Checks if Plus, Div, Less, Num, Bool and If all work, returns BoolV
+    val test2 = Let("x", Num(4),Plus(Let("x", Plus(Var("x"), Num(1)), Var("x")),Var("x"))) // Same test case as in the SO, checks if let works and if binding and shadowing are correct. Should be NumV(9)
+    val test3 = Let("x", Num(4), If(And(Bool(false), Let("x", Val("x"), Less(Val("x"), Num(5)))), ))
     val test4 = ???
     val test5 = ???
     val test6 = ???
