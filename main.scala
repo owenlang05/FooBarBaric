@@ -58,7 +58,7 @@ def eval(e: Expr, env: Env = Map.empty): Either[EvalError, Value] =
             expect_int(e1, e2, env) match
                 case Left(error) => Left(error)
                 case Right((a, b)) => 
-                    if b then
+                    if b != 0 then
                         Right(IntV(a / b))
                     else
                         Left(DivideByZero)
@@ -124,12 +124,17 @@ def eval(e: Expr, env: Env = Map.empty): Either[EvalError, Value] =
     var expr = Let("x", Num(4),Plus(Let("x", Plus(Var("x"), Num(1)), Var("x")),Var("x")))
     val expr1 = Let("x", Num(10), Var("x"))
 
-    val test1 = If(Less(Plus(Num(3), Num(2)), Div(Num(20), Num(2))), Bool(true), Bool(false)) // Checks if Plus, Div, Less, Num, Bool and If all work, returns BoolV
-    val test2 = Let("x", Num(4),Plus(Let("x", Plus(Var("x"), Num(1)), Var("x")),Var("x"))) // Same test case as in the SO, checks if let works and if binding and shadowing are correct. Should be NumV(9)
-    val test3 = Let("x", Num(4), If(And(Bool(false), Let("x", Val("x"), Less(Val("x"), Num(5)))), ))
-    val test4 = ???
-    val test5 = ???
-    val test6 = ???
+    val test1 = If(Less(Plus(Num(3), Num(2)), Div(Num(20), Num(2))), Bool(true), Bool(false)) // Checks if Plus, Div, Less, Num, Bool and If all work, returns BoolV(true)
+    val test2 = Let("x", Num(4),Plus(Let("x", Plus(Var("x"), Num(1)), Var("x")),Var("x"))) // Same test case as in the SO, checks if let works and if binding and shadowing are correct. Should be IntV(9)
+    val test3 = And(Bool(false), Num(5)) // would produce an ExpectedBool error if second Expr is not skipped BoolV(false) is expected
+    val test4 = Div(Num(6), Num(0)) // Should return DivideByZero error
+    val test5 = Var("x") // Should return and Unbound error
+    val test6 = Plus(Bool(true), Num(5)) // Returns ExpectedInt
+    val test7 = And(Num(5), Num(6)) // Returns ExpectedBool
 
-    var res = eval(expr)
-    println(res)
+    val tests = List[Expr](test1, test2, test3, test4, test5, test6, test7)
+    var i = 1
+    for test <- tests do
+        var res = eval(test)
+        println(s"Test: $i = $res")
+        i += 1
