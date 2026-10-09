@@ -44,7 +44,7 @@ def eval(e: Expr, env: Env = Map.empty): Either[EvalError, Value] =
         case Num(n) => Right(IntV(n))
         case Bool(b) => Right(BoolV(b))
         case Var(name) =>
-            val x = env.get(name)
+            val x = env.getOrElse(name, None)
             x match
                 case Some(value) => Right(value)
                 case None => Left(Unbound(name))
@@ -58,6 +58,7 @@ def eval(e: Expr, env: Env = Map.empty): Either[EvalError, Value] =
             expect_int(e1, e2, env) match
                 case Left(error) => Left(error)
                 case Right((a, b)) => Right(IntV(a / b))
+            //case for div by zero or naturally error out?
             
         case Less(e1, e2) =>
             expect_int(e1, e2, env) match
