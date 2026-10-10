@@ -28,17 +28,31 @@ type Env = Map[String, Value]
 
 def expect_int(left: Expr, right: Expr, env: Env = Map.empty): Either[EvalError, (Int, Int)] =
     val res1 = eval(left, env)
-    val res2 = eval(right, env)
-    (res1, res2) match
-    case (Left(error), _) => Left(error)
-    case (_, Left(error)) => Left(error)
-    case (Right(x), Right(y)) =>
-        (x, y) match
-            case (BoolV(b), _) => Left(ExpectedInt)
-            case (_, BoolV(b)) => Left(ExpectedInt)
-            case (IntV(a), IntV(b)) => Right((a, b))
+    res1 match
+        case Left(error) => Left(error)
+        case Right(value) =>
+            value match
+                case BoolV(_) => Left(ExpectedInt)
+                case IntV(a) => 
+                    val res2 = eval(right, env)
+                    res2 match
+                        case Left(error) => Left(error)
+                        case Right(value2) => 
+                            value2 match
+                                case BoolV(_) => Left(ExpectedInt)
+                                case IntV(b) => Right((a, b))
+                            
 
-
+def expect_bool(expr: Expr, env: Env = Map.empty): Either[EvalError, Boolean] = 
+    val res = eval(expr, env)
+    res match
+        case Left(error) => Left(error)
+        case Right(value) => 
+            value match
+                case IntV(_) => Left(ExpectedBool)
+                case BoolV(b) => Right(b)
+            
+    
 def eval(e: Expr, env: Env = Map.empty): Either[EvalError, Value] = 
     e match
         case Num(n) => Right(IntV(n))
@@ -95,35 +109,26 @@ def eval(e: Expr, env: Env = Map.empty): Either[EvalError, Value] =
             
         case And(left, right) => 
             // this is heinous
-            val res1 = eval(left)
+            val res1 = expect_bool(left, env)
             res1 match
-                case Left(error) => Left(error)
-                case Right(value) => 
-                    value match
-                        case IntV(_) => Left(ExpectedBool)
-                        case BoolV(b) => 
-                            if b then
-                                val res2 = eval(right)
-                                res2 match
-                                    case Left(error) => Left(error)
-                                    case Right(value) => 
-                                        value match
-                                            case IntV(_) => Left(ExpectedBool)
-                                            case BoolV(b) => 
-                                                if b then
-                                                    Right(BoolV(true))
-                                                else
-                                                    Right(BoolV(false))
-                            else
-                                Right(BoolV(false))            
+                case Left(err) => Left(err)
+                case Right(b) => 
+                    if b then
+                        val res2 = expect_bool(right, env)
+                        res2 match
+                            case Left(err) => Left(err)
+                            case Right(b) if b => Right(BoolV(true))
+                            case Right(b) => Right(BoolV(false))
+                    else
+                        Right(BoolV(false))
+                        
+            
+                          
                                 
                     
             
     
 @main def main() : Unit = 
-    var expr = Let("x", Num(4),Plus(Let("x", Plus(Var("x"), Num(1)), Var("x")),Var("x")))
-    val expr1 = Let("x", Num(10), Var("x"))
-
     val test1 = If(Less(Plus(Num(3), Num(2)), Div(Num(20), Num(2))), Bool(true), Bool(false)) // Checks if Plus, Div, Less, Num, Bool and If all work, returns BoolV(true)
     val test2 = Let("x", Num(4),Plus(Let("x", Plus(Var("x"), Num(1)), Var("x")),Var("x"))) // Same test case as in the SO, checks if let works and if binding and shadowing are correct. Should be IntV(9)
     val test3 = And(Bool(false), Num(5)) // would produce an ExpectedBool error if second Expr is not skipped BoolV(false) is expected

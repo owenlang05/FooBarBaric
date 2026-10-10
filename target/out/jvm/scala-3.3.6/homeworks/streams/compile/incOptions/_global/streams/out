@@ -1,209 +1,209 @@
-[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /home/owenlang/Documents/homework/CS478/FooBarBaric/target/out/jvm/scala-3.3.6/homeworks/classes.bak[0m
-[0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$If$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Num.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$IntV.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError$Unbound$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Div.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$IntV$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Bool.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	main$package$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError$$anon$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$BoolV$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$If.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Less.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Bool$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Var.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	main$package.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Let$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	main.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Div$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Plus$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Var$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$And$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$BoolV.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Num$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Let.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError$Unbound.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$And.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Plus.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Less$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$If$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Num.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$IntV.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError$Unbound$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Div.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$IntV$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Bool.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	main$package$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError$$anon$1.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$BoolV$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$If.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Less.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Bool$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Var.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	main$package.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Let$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	main.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Div$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Plus$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Var$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$And$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$BoolV.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Num$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Let.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError$Unbound.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$And.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Plus.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Less$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$If$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Num.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$IntV.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError$Unbound$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Div.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$IntV$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Bool.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	main$package$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError$$anon$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$BoolV$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$If.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Less.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Bool$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Var.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	main$package.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Let$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	main.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Div$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Plus$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Var$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$And$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$BoolV.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Num$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Let.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError$Unbound.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$And.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Plus.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Less$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$If$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Num.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$IntV.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError$Unbound$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Div.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$IntV$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Bool.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	main$package$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError$$anon$1.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$BoolV$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$If.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Less.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Bool$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Var.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	main$package.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Let$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	main.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Div$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Plus$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Var$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$And$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$BoolV.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Num$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Let.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError$Unbound.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$And.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Plus.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Less$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$If$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Num.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$IntV.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError$Unbound$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Div.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$IntV$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Bool.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	main$package$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError$$anon$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$BoolV$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$If.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Less.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Bool$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Var.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	main$package.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Let$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	main.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Div$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Plus$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Var$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$And$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$BoolV.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Num$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Let.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError$Unbound.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$And.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Plus.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Less$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$If$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Num.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$IntV.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError$Unbound$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Div.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$IntV$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Bool.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	main$package$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError$$anon$1.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$BoolV$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$If.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Less.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Bool$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Var.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	main$package.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Let$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	main.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Div$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Plus$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Var$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$And$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$BoolV.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Value$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Num$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Let.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	EvalError$Unbound.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$And.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Plus.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Expr$Less$.tasty[0m
-[0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: /home/owenlang/Documents/homework/CS478/FooBarBaric/target/out/jvm/scala-3.3.6/homeworks/classes.bak[0m
+[debug] Created transactional ClassFileManager with tempDir = /home/owenlang/Documents/homework/CS478/FooBarBaric/target/out/jvm/scala-3.3.6/homeworks/classes.bak
+[debug] About to delete class files:
+[debug] 	Expr$If$.class
+[debug] 	Expr$Num.class
+[debug] 	Value.class
+[debug] 	Value$IntV.class
+[debug] 	EvalError$Unbound$.class
+[debug] 	Expr$Div.class
+[debug] 	Value$IntV$.class
+[debug] 	Expr$Bool.class
+[debug] 	main$package$.class
+[debug] 	EvalError$$anon$1.class
+[debug] 	Value$BoolV$.class
+[debug] 	Expr$If.class
+[debug] 	Expr.class
+[debug] 	Expr$Less.class
+[debug] 	Expr$.class
+[debug] 	EvalError.class
+[debug] 	Expr$Bool$.class
+[debug] 	Expr$Var.class
+[debug] 	main$package.class
+[debug] 	Expr$Let$.class
+[debug] 	main.class
+[debug] 	Expr$Div$.class
+[debug] 	EvalError$.class
+[debug] 	Expr$Plus$.class
+[debug] 	Expr$Var$.class
+[debug] 	Expr$And$.class
+[debug] 	Value$BoolV.class
+[debug] 	Value$.class
+[debug] 	Expr$Num$.class
+[debug] 	Expr$Let.class
+[debug] 	EvalError$Unbound.class
+[debug] 	Expr$And.class
+[debug] 	Expr$Plus.class
+[debug] 	Expr$Less$.class
+[debug] 	Expr$If$.tasty
+[debug] 	Expr$Num.tasty
+[debug] 	Value.tasty
+[debug] 	Value$IntV.tasty
+[debug] 	EvalError$Unbound$.tasty
+[debug] 	Expr$Div.tasty
+[debug] 	Value$IntV$.tasty
+[debug] 	Expr$Bool.tasty
+[debug] 	main$package$.tasty
+[debug] 	EvalError$$anon$1.tasty
+[debug] 	Value$BoolV$.tasty
+[debug] 	Expr$If.tasty
+[debug] 	Expr.tasty
+[debug] 	Expr$Less.tasty
+[debug] 	Expr$.tasty
+[debug] 	EvalError.tasty
+[debug] 	Expr$Bool$.tasty
+[debug] 	Expr$Var.tasty
+[debug] 	main$package.tasty
+[debug] 	Expr$Let$.tasty
+[debug] 	main.tasty
+[debug] 	Expr$Div$.tasty
+[debug] 	EvalError$.tasty
+[debug] 	Expr$Plus$.tasty
+[debug] 	Expr$Var$.tasty
+[debug] 	Expr$And$.tasty
+[debug] 	Value$BoolV.tasty
+[debug] 	Value$.tasty
+[debug] 	Expr$Num$.tasty
+[debug] 	Expr$Let.tasty
+[debug] 	EvalError$Unbound.tasty
+[debug] 	Expr$And.tasty
+[debug] 	Expr$Plus.tasty
+[debug] 	Expr$Less$.tasty
+[debug] We backup class files:
+[debug] 	Expr$If$.class
+[debug] 	Expr$Num.class
+[debug] 	Value.class
+[debug] 	Value$IntV.class
+[debug] 	EvalError$Unbound$.class
+[debug] 	Expr$Div.class
+[debug] 	Value$IntV$.class
+[debug] 	Expr$Bool.class
+[debug] 	main$package$.class
+[debug] 	EvalError$$anon$1.class
+[debug] 	Value$BoolV$.class
+[debug] 	Expr$If.class
+[debug] 	Expr.class
+[debug] 	Expr$Less.class
+[debug] 	Expr$.class
+[debug] 	EvalError.class
+[debug] 	Expr$Bool$.class
+[debug] 	Expr$Var.class
+[debug] 	main$package.class
+[debug] 	Expr$Let$.class
+[debug] 	main.class
+[debug] 	Expr$Div$.class
+[debug] 	EvalError$.class
+[debug] 	Expr$Plus$.class
+[debug] 	Expr$Var$.class
+[debug] 	Expr$And$.class
+[debug] 	Value$BoolV.class
+[debug] 	Value$.class
+[debug] 	Expr$Num$.class
+[debug] 	Expr$Let.class
+[debug] 	EvalError$Unbound.class
+[debug] 	Expr$And.class
+[debug] 	Expr$Plus.class
+[debug] 	Expr$Less$.class
+[debug] 	Expr$If$.tasty
+[debug] 	Expr$Num.tasty
+[debug] 	Value.tasty
+[debug] 	Value$IntV.tasty
+[debug] 	EvalError$Unbound$.tasty
+[debug] 	Expr$Div.tasty
+[debug] 	Value$IntV$.tasty
+[debug] 	Expr$Bool.tasty
+[debug] 	main$package$.tasty
+[debug] 	EvalError$$anon$1.tasty
+[debug] 	Value$BoolV$.tasty
+[debug] 	Expr$If.tasty
+[debug] 	Expr.tasty
+[debug] 	Expr$Less.tasty
+[debug] 	Expr$.tasty
+[debug] 	EvalError.tasty
+[debug] 	Expr$Bool$.tasty
+[debug] 	Expr$Var.tasty
+[debug] 	main$package.tasty
+[debug] 	Expr$Let$.tasty
+[debug] 	main.tasty
+[debug] 	Expr$Div$.tasty
+[debug] 	EvalError$.tasty
+[debug] 	Expr$Plus$.tasty
+[debug] 	Expr$Var$.tasty
+[debug] 	Expr$And$.tasty
+[debug] 	Value$BoolV.tasty
+[debug] 	Value$.tasty
+[debug] 	Expr$Num$.tasty
+[debug] 	Expr$Let.tasty
+[debug] 	EvalError$Unbound.tasty
+[debug] 	Expr$And.tasty
+[debug] 	Expr$Plus.tasty
+[debug] 	Expr$Less$.tasty
+[debug] Registering generated classes:
+[debug] 	Expr$If$.class
+[debug] 	Expr$Num.class
+[debug] 	Value.class
+[debug] 	Value$IntV.class
+[debug] 	EvalError$Unbound$.class
+[debug] 	Expr$Div.class
+[debug] 	Value$IntV$.class
+[debug] 	Expr$Bool.class
+[debug] 	main$package$.class
+[debug] 	EvalError$$anon$1.class
+[debug] 	Value$BoolV$.class
+[debug] 	Expr$If.class
+[debug] 	Expr.class
+[debug] 	Expr$Less.class
+[debug] 	Expr$.class
+[debug] 	EvalError.class
+[debug] 	Expr$Bool$.class
+[debug] 	Expr$Var.class
+[debug] 	main$package.class
+[debug] 	Expr$Let$.class
+[debug] 	main.class
+[debug] 	Expr$Div$.class
+[debug] 	EvalError$.class
+[debug] 	Expr$Plus$.class
+[debug] 	Expr$Var$.class
+[debug] 	Expr$And$.class
+[debug] 	Value$BoolV.class
+[debug] 	Value$.class
+[debug] 	Expr$Num$.class
+[debug] 	Expr$Let.class
+[debug] 	EvalError$Unbound.class
+[debug] 	Expr$And.class
+[debug] 	Expr$Plus.class
+[debug] 	Expr$Less$.class
+[debug] 	Expr$If$.tasty
+[debug] 	Expr$Num.tasty
+[debug] 	Value.tasty
+[debug] 	Value$IntV.tasty
+[debug] 	EvalError$Unbound$.tasty
+[debug] 	Expr$Div.tasty
+[debug] 	Value$IntV$.tasty
+[debug] 	Expr$Bool.tasty
+[debug] 	main$package$.tasty
+[debug] 	EvalError$$anon$1.tasty
+[debug] 	Value$BoolV$.tasty
+[debug] 	Expr$If.tasty
+[debug] 	Expr.tasty
+[debug] 	Expr$Less.tasty
+[debug] 	Expr$.tasty
+[debug] 	EvalError.tasty
+[debug] 	Expr$Bool$.tasty
+[debug] 	Expr$Var.tasty
+[debug] 	main$package.tasty
+[debug] 	Expr$Let$.tasty
+[debug] 	main.tasty
+[debug] 	Expr$Div$.tasty
+[debug] 	EvalError$.tasty
+[debug] 	Expr$Plus$.tasty
+[debug] 	Expr$Var$.tasty
+[debug] 	Expr$And$.tasty
+[debug] 	Value$BoolV.tasty
+[debug] 	Value$.tasty
+[debug] 	Expr$Num$.tasty
+[debug] 	Expr$Let.tasty
+[debug] 	EvalError$Unbound.tasty
+[debug] 	Expr$And.tasty
+[debug] 	Expr$Plus.tasty
+[debug] 	Expr$Less$.tasty
+[debug] Removing the temporary directory used for backing up class files: /home/owenlang/Documents/homework/CS478/FooBarBaric/target/out/jvm/scala-3.3.6/homeworks/classes.bak
