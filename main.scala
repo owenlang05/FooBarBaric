@@ -1,4 +1,4 @@
-import scala.compiletime.ops.double
+//import scala.compiletime.ops.double
 enum Expr:
     case Num(n: Int)
     case Bool(b: Boolean)
@@ -139,6 +139,6 @@ def eval(e: Expr, env: Env = Map.empty): Either[EvalError, Value] =
     val tests = List[Expr](test1, test2, test3, test4, test5, test6, test7, test8, test9)
     var i = 1
     for test <- tests do
-        var res = eval(test)
+        val res = eval(test)
         println(s"Test: $i = $res")
         i += 1
