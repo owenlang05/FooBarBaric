@@ -88,11 +88,8 @@ def eval(e: Expr, env: Env = Map.empty): Either[EvalError, Value] =
                 case Left(error) => Left(error)
                 case Right(value) =>
                     value match
-                        case IntV(x) =>
-                            if x != 0 then
-                                eval(yes, env)
-                            else
-                                eval(no, env)
+                        //requires bool!
+                        case IntV(x) => Left(ExpectedBool)
                         case BoolV(b) =>
                             if b then
                                 eval(yes, env)
@@ -136,8 +133,10 @@ def eval(e: Expr, env: Env = Map.empty): Either[EvalError, Value] =
     val test5 = Var("x") // Should return and Unbound error
     val test6 = Plus(Bool(true), Num(5)) // Returns ExpectedInt
     val test7 = And(Num(5), Num(6)) // Returns ExpectedBool
+    val test8 = And(Bool(true), Bool(true)) // Catches an implementation that returns BoolV(false) for EVERY And!
+    val test9 = If(Num(5), Bool(true), Bool(false)) // Should return an ExpectedBool error!
 
-    val tests = List[Expr](test1, test2, test3, test4, test5, test6, test7)
+    val tests = List[Expr](test1, test2, test3, test4, test5, test6, test7, test8, test9)
     var i = 1
     for test <- tests do
         var res = eval(test)
