@@ -9,6 +9,10 @@ enum LanguageError:
     case ExpectedBool
     case DivideByZero
     case Unbound(name: String)
+    case HeartbeatRequired
+    case HeartbeatTooEarly(actual: Int)
+    case MissingQTEOutcome
+    case StepLimitExceeded
 
 case class RuntimeState(
     phase: Phase = Phase.Foo,

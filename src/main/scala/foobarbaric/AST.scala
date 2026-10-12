@@ -9,6 +9,8 @@ enum Expr:
     // Arithmetic
     case Plus(left: Expr, right: Expr)
     case Div(left: Expr, right: Expr)
+    case Minus(left: Expr, right: Expr)
+    case Mult(left: Expr, right: Expr)
 
     // Comparison and logic
     case Less(left: Expr, right: Expr)

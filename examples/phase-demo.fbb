@@ -1,0 +1,17 @@
+// FooBarbaric source demo: Foo precedence, then Bar precedence + inversion.
+FooBar1 foobar 2 + 3 * 4
+FooBar2 foobar 0
+FooBar3 foobar 0
+FooBar4 foobar 0
+FooBar5 foobar 0
+FooBar6 foobar 0
+FooBar()
+FooBar7 foobar 2 + 3 * 4
+barfoo Foo FooBar1 < 100 Bar
+Foo
+    FooBar8 foobar 999
+Bar
+foofoobarbar
+Foo
+    FooBar8 foobar 42
+Bar

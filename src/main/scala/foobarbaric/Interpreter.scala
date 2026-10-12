@@ -157,6 +157,22 @@ object Interpreter:
                             nextState,
                             Right(IntV(a / b))
                         )
+                        
+            case Minus(left, right) =>
+                val (nextState, result) =
+                    expectTwoInts(left, right, state, env)
+                EvalResult(
+                    nextState,
+                    result.map { case (a, b) => IntV(a - b) }
+                )
+
+            case Mult(left, right) =>
+                val (nextState, result) =
+                    expectTwoInts(left, right, state, env)
+                EvalResult(
+                    nextState,
+                    result.map { case (a, b) => IntV(a * b) }
+                )
 
             case Less(left, right) =>
                 val (nextState, result) =
