@@ -5,8 +5,8 @@ lazy val root = project.in(file(".")).settings(
     "-deprecation",
     "-unchecked",
   ),
-  logLevel := Level.Warn,
-  maxErrors := 10, // maximum number of errors shown by the Scala compiler
-  libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.12",
+  logLevel := Level.Info,
+  maxErrors := 10,
+  libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.12" % Test,
   run / watchTriggers += baseDirectory.value.toGlob / "*.tests"
 )
