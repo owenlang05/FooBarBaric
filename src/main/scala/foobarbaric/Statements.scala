@@ -7,3 +7,5 @@ enum Stmt:
     case While(condition: Expr, body: Stmt)
     case Block(statements: List[Stmt])
     case FooBar
+    case Function(name: String, params: List[String], body: Stmt)
+    case Return(expr: Expr)

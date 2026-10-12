@@ -4,7 +4,7 @@ import scala.collection.mutable.ArrayBuffer
 
 /**
  * Source parser for the currently executable subset of FooBarBaric.
- * It parses original FooBar syntax; it does not implement functions/return yet.
+ * It parses original FooBar syntax, including functions and returns.
  * Phase changes here follow QTEs in SOURCE order, as in the class slides.
  */
 object FooBarParser:
@@ -12,13 +12,15 @@ object FooBarParser:
     private case class ParseFailure(message: String)
         extends RuntimeException(message)
 
+    private val functionHeader = """foo\s+(FooBar[0-9]+)\s+Foo(?:\s+(.*?))?\s+Bar""".r
+    private val bareReturn = """(foofoo|barfoo|barbar)\s+(.+)""".r
     private val assignment = """(FooBar[0-9]+)\s+foobar\s+(.+)""".r
     private val control = """(foofoo|barfoo|barbar)\s+Foo\s+(.+)\s+Bar""".r
     private val elseIf = """foofoobar\s+Foo\s+(.+)\s+Bar""".r
 
     // Whitespace inside the two Boolean literals is tolerated.
     private val expressionToken =
-        """FooBar[0-9]+|foo\s+bar|bar\s+foo|[0-9]+|&&|\+|-|\*|/|<|Foo|Bar""".r
+        """FooBar[0-9]+|foo\s+bar\s+foo|foo\s+bar|bar\s+foo|[0-9]+|&&|\+|-|\*|/|<|Foo|Bar""".r
 
     def parse(source: String): Either[String, Stmt] =
         val lines = source.linesIterator
@@ -80,7 +82,19 @@ object FooBarParser:
                 case value if value.forall(_.isDigit) =>
                     Expr.Num(value.toInt)
                 case name if name.matches("FooBar[0-9]+") =>
-                    Expr.Var(name)
+                    if index < tokens.length && tokens(index) == "Foo" then
+                        index += 1
+                        val args = ArrayBuffer.empty[Expr]
+                        if index < tokens.length && tokens(index) != "Bar" then
+                            args += expression(0)
+                            while index < tokens.length && tokens(index) == "foo bar foo" do
+                                index += 1
+                                args += expression(0)
+                        if next() != "Bar" then
+                            throw ParseFailure("Expected Bar after function arguments")
+                        Expr.Call(name, args.toList)
+                    else
+                        Expr.Var(name)
                 case other =>
                     throw ParseFailure(s"Unexpected expression token: '$other'")
 
@@ -203,6 +217,16 @@ object FooBarParser:
                     phase = RuntimeRules.nextPhase(phase)
                     Stmt.FooBar
 
+                case functionHeader(name, paramsSource) =>
+                    val params =
+                        if paramsSource == null || paramsSource.trim.isEmpty then Nil
+                        else paramsSource.trim.split("""\s+foo\s+bar\s+foo\s+""").toList
+                    if !params.forall(_.matches("FooBar[0-9]+")) then
+                        throw ParseFailure("Invalid function parameter list")
+                    if params.distinct.length != params.length then
+                        throw ParseFailure("Duplicate function parameters")
+                    Stmt.Function(name, params, parseBlock(depth + 1))
+
                 case assignment(name, source) =>
                     Stmt.Assign(name, parseExpression(source))
 
@@ -212,10 +236,15 @@ object FooBarParser:
                         case "while" =>
                             val condition = parseExpression(source)
                             Stmt.While(condition, parseBlock(depth + 1))
+                        case "return" =>
+                            Stmt.Return(parseExpression(s"Foo $source Bar"))
                         case _ =>
-                            throw ParseFailure(
-                                "Return is in the reference grammar but is not implemented yet"
-                            )
+                            throw ParseFailure("Unrecognized phase-dependent keyword")
+
+                case bareReturn(keyword, source) =>
+                    if keywordRole(keyword) != "return" then
+                        throw ParseFailure(s"Expected a Foo/Bar condition for $keyword")
+                    Stmt.Return(parseExpression(source))
 
                 case other =>
                     throw ParseFailure(
