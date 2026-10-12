@@ -5,6 +5,10 @@ enum Phase:
 
 enum LanguageError:
     case InsufficientComboPoints(required: Int, available: Int)
+    case ExpectedInt
+    case ExpectedBool
+    case DivideByZero
+    case Unbound(name: String)
 
 case class RuntimeState(
     phase: Phase = Phase.Foo,
