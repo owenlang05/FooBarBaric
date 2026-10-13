@@ -1,0 +1,58 @@
+package foobarbaric
+
+enum Phase:
+    case Foo, Bar, FooBar
+
+enum LanguageError:
+    case InsufficientComboPoints(required: Int, available: Int)
+    case ExpectedInt
+    case ExpectedBool
+    case DivideByZero
+    case Unbound(name: String)
+    case HeartbeatRequired
+    case HeartbeatTooEarly(actual: Int)
+    case MissingQTEOutcome
+    case StepLimitExceeded
+    case UndefinedFunction(name: String)
+    case ArgumentCountMismatch(expected: Int, actual: Int)
+    case MissingReturn(name: String)
+    case ReturnOutsideFunction
+
+case class RuntimeState(
+    phase: Phase = Phase.Foo,
+    comboPoints: Int = 0,
+    statementsSinceHeartbeat: Int = 0
+)
+
+case class AttemptResult(
+    state: RuntimeState,
+    outcome: Either[LanguageError, Unit]
+)
+
+object RuntimeRules:
+    def nextPhase(phase: Phase): Phase =
+        phase match
+            case Phase.Foo => Phase.Bar
+            case Phase.Bar => Phase.FooBar
+            case Phase.FooBar => Phase.Foo
+
+    def heartbeat(state: RuntimeState, success: Boolean): RuntimeState =
+        val newPoints =
+            if success then state.comboPoints + 2
+            else 0
+        state.copy(
+            phase = nextPhase(state.phase),
+            comboPoints = newPoints,
+            statementsSinceHeartbeat = 0
+        )
+
+    def attemptOperation(state: RuntimeState, cost: Int): AttemptResult =
+        require(cost >= 0, "Operation cost cannot be negative")
+        if state.comboPoints < cost then
+            AttemptResult(state,
+                Left(LanguageError.InsufficientComboPoints(cost, state.comboPoints)))
+        else
+            AttemptResult(
+                state.copy(comboPoints = state.comboPoints - cost),
+                Right(())
+            )

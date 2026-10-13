@@ -1,0 +1,79 @@
+Example Results from Mutation:
+
+PS C:\Users\christian.preti\OneDrive - West Point\School\AY 2026-27 1 Sem\Classes\Programming Languages (CS478)\SO3\GitHub\FooBarBaric> powershell -ExecutionPolicy Bypass -File .\scripts\run-mutation-test.ps1
+=== TEMPORARY MUTATION: Bar conditions are NO LONGER inverted ===
+[info] welcome to sbt 2.0.10 (Oracle Corporation Java 21.0.9)
+[info] loading project definition from C:\Users\christian.preti\OneDrive - West Point\School\AY 2026-27 1 Sem\Classes\Programming Languages (CS478)\SO3\GitHub\FooBarBaric\project
+sbt.bat : [info] failed to a create symbolic link. consider enabling Developer Mode
+At C:\Users\christian.preti\OneDrive - West Point\School\AY 2026-27 1 Sem\Classes\Programming Languages (CS478)\SO3\GitHub\FooBarBaric\scripts\run-mutation-test.ps1:29 char:20
++ ... stOutput = (& sbt --no-server 'Test / testOnly foobarbaric.FooBarOrdi ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([info] failed t... Developer Mode:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+[info] failed to a create symbolic link. consider enabling Developer Mode
+[info] failed to a create symbolic link. consider enabling Developer Mode
+[info] failed to a create symbolic link. consider enabling Developer Mode
+[info] set current project to homeworks (in build file:/C:/Users/christian.preti/OneDrive%20-%20West%20Point/School/AY%202026-27%201%20Sem/Classes/Programming%20Languages%20(CS478)/SO3/GitHub/FooBarBaric/)
+[info] failed to a create symbolic link. consider enabling Developer Mode
+[warn] multiple main classes detected: run 'show discoveredMainClasses' to see the list
+[info] FooBarOrdinaryTests:
+[info] - Absolute value handles negative input in Bar phase *** FAILED ***
+[info]   Some(IntV(-3)) did not equal Some(IntV(3)) (FooBarOrdinaryTests.scala:27)
+[info]   Analysis:
+[info]   Some(value: Value$IntV(n: -3 -> 3))
+[info] - Absolute value handles positive input in Bar phase *** FAILED ***
+[info]   Some(IntV(-8)) did not equal Some(IntV(8)) (FooBarOrdinaryTests.scala:35)
+[info]   Analysis:
+[info]   Some(value: Value$IntV(n: -8 -> 8))
+[info] - Capacity doubling input 2 repeats twice and produces 8
+[info] - Capacity doubling input 3 repeats once and produces 6
+[info] - Failed QTE shifts phase but leaves comparison unaffordable
+[info] - Original phase demo combines precedence and Bar inversion *** FAILED ***
+[info]   Some(IntV(999)) did not equal Some(IntV(42)) (FooBarOrdinaryTests.scala:67)
+[info]   Analysis:
+[info]   Some(value: Value$IntV(n: 999 -> 42))
+[info] - Original function demo combines QTE funding with call and return
+[info] - A premature heartbeat is a controlled error
+[info] - A missing simulated QTE outcome is a controlled error
+[info] - A seventh ordinary statement without heartbeat is rejected
+[info] Run completed in 313 milliseconds.
+[info] Total number of tests run: 10
+[info] Suites: completed 1, aborted 0
+[info] Tests: succeeded 7, failed 3, canceled 0, ignored 0, pending 0
+[info] *** 3 TESTS FAILED ***
+[error] Failed tests:
+[error]         foobarbaric.FooBarOrdinaryTests
+[error] (Test / testOnly) sbt.TestsFailedException: Tests unsuccessful
+[error] elapsed time: 1 s, cache 100%, 28 disk cache hits
+
+=== Original source restored (including original line endings) ===
+=== Detected: changing Bar inversion caused the expected test to fail ===
+[info] welcome to sbt 2.0.10 (Oracle Corporation Java 21.0.9)
+[info] loading project definition from C:\Users\christian.preti\OneDrive - West Point\School\AY 2026-27 1 Sem\Classes\Programming Languages (CS478)\SO3\GitHub\FooBarBaric\project
+[info] failed to a create symbolic link. consider enabling Developer Mode
+[info] failed to a create symbolic link. consider enabling Developer Mode
+[info] failed to a create symbolic link. consider enabling Developer Mode
+[info] failed to a create symbolic link. consider enabling Developer Mode
+[info] set current project to homeworks (in build file:/C:/Users/christian.preti/OneDrive%20-%20West%20Point/School/AY%202026-27%201%20Sem/Classes/Programming%20Languages%20(CS478)/SO3/GitHub/FooBarBaric/)
+[info] failed to a create symbolic link. consider enabling Developer Mode
+[warn] multiple main classes detected: run 'show discoveredMainClasses' to see the list
+[info] FooBarOrdinaryTests:
+[info] - Absolute value handles negative input in Bar phase
+[info] - Absolute value handles positive input in Bar phase
+[info] - Capacity doubling input 2 repeats twice and produces 8
+[info] - Capacity doubling input 3 repeats once and produces 6
+[info] - Failed QTE shifts phase but leaves comparison unaffordable
+[info] - Original phase demo combines precedence and Bar inversion
+[info] - Original function demo combines QTE funding with call and return
+[info] - A premature heartbeat is a controlled error
+[info] - A missing simulated QTE outcome is a controlled error
+[info] - A seventh ordinary statement without heartbeat is rejected
+[info] Run completed in 309 milliseconds.
+[info] Total number of tests run: 10
+[info] Suites: completed 1, aborted 0
+[info] Tests: succeeded 10, failed 0, canceled 0, ignored 0, pending 0
+[info] All tests passed.
+[success] elapsed time: 1 s, cache 100%, 29 disk cache hits
+=== Restored original passes all ordinary-program tests ===
+PS C:\Users\christian.preti\OneDrive - West Point\School\AY 2026-27 1 Sem\Classes\Programming Languages (CS478)\SO3\GitHub\FooBarBaric>

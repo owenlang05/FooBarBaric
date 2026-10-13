@@ -1,0 +1,20 @@
+// Double capacity until it reaches at least five.
+FooBar90 foobar 0
+FooBar91 foobar 0
+FooBar92 foobar 0
+FooBar93 foobar 0
+FooBar94 foobar 0
+FooBar95 foobar 0
+FooBar()
+FooBar96 foobar 0
+FooBar97 foobar 0
+FooBar98 foobar 0
+FooBar99 foobar 0
+FooBar100 foobar 0
+FooBar101 foobar 0
+FooBar()
+FooBar1 foobar 2
+foofoo Foo FooBar1 < 5 Bar
+Foo
+    FooBar1 foobar FooBar1 * 2
+Bar

@@ -1,0 +1,16 @@
+// Absolute value; Bar phase inverts the conditional.
+FooBar1 foobar -3
+FooBar2 foobar 0
+FooBar3 foobar 0
+FooBar4 foobar 0
+FooBar5 foobar 0
+FooBar6 foobar 0
+FooBar()
+barfoo Foo FooBar1 < 0 Bar
+Foo
+    FooBar7 foobar FooBar1
+Bar
+foofoobarbar
+Foo
+    FooBar7 foobar 0 - FooBar1
+Bar
