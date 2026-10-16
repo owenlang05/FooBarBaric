@@ -51,7 +51,7 @@ FooBarBaric/
 ├── .gitignore                        => simple git ignore file
 ├── README.md                         => this right here :D
 ├── build.sbt                         => specifies how to build the file
-└── main.scala                        => the original parser/eval (problem 1)
+└── main.scala                        => the original AST evaluator (problem 1)
 ```
 
 ## Running
@@ -113,11 +113,11 @@ powershell -ExecutionPolicy Bypass -File .\scripts\run-mutation-test.ps1
 ```
 
 ## Dependencies
-// Requires no paid services/API keys!
+Requires no paid services/API keys!
 
 ## I/O
 
-There are deterministic QTEs within this language; additionally, this language will take normal input and print outputs to screen (as long as it follows the program structure requirements!).
+There are deterministic QTEs within this language; additionally, this language will take source-specified inputs and the demo runners display results (as long as it follows the program structure requirements!).
 
 ## Test Cases
 
